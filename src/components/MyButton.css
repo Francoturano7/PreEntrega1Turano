@@ -1,0 +1,40 @@
+.btn {
+    /* Color del texo */
+    
+    color:darkred;
+    /* Eliminar color de fondo */
+    
+    background: transparent;
+    /* Grosor del borde, estilo de línea y color */
+    
+    border: 2px solid #000000;
+    /* Añadir esquinas curvadas */
+    
+    border-radius: 6px;
+    /* Poner texto en mayúsculas */
+    
+    border: none;
+          color: white;
+          padding: 12px 20px;
+          text-align: center;
+          display: inline-block;
+          font-size: 16px;
+          margin: 4px 2px;
+          -webkit-transition-duration: 0.4s; /* Safari */
+          transition-duration: 0.4s;
+          cursor: pointer;
+          text-decoration: none;
+          text-transform: uppercase;
+    }
+    .btn1 {
+          background-color: rgb(117, 111, 162); 
+          color: black; 
+          border: 2px solid #000000;
+    }
+    /* Al poner el curso encima (hover) */
+    
+    .btn1:hover {
+          background-color:darkred;
+          color: white;
+     }
+     
