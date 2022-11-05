@@ -1,29 +1,24 @@
 import React from 'react'
-import CartWidget from '../CartWidget'
+import CartWidget from '../CartWidget';
+import "./NavBar.css";
 
 function NavBar() {
   return (
-    <nav>
-      <ul>
-        <li>
-          <a href="/">
-            <h2>Mi Tienda</h2>
-          </a>
-        </li>
-        <li>
-          <a href="/">Item1</a>
-        </li>
-        <li>
-          <a href="/">Item2</a>
-        </li>
-        <li>
-          <a href="/">Item3</a>
-        </li>
-        <li>
-          <CartWidget/>
-        </li>
-      </ul>
+    <>
+    <nav className='navbar navbar-dark navbar-expand-lg bg-dark' >
+      <div className="container-fluid bg-dark">
+  <a className="navbar-brand logo" href="#home"><img src="./imgs/logoRopa.jpeg" alt="logoNavbar"/></a>
+  
+
+    <ul className='navbar-nav mx-auto ' >
+  <li><a className='active ' href="#news">Productos</a></li>
+  <li><a href="#contact">Contacto</a></li>
+  <li><a href="#contact">Seguinos</a></li>
+</ul>
+   <a  className='carro'  href="#about"><CartWidget  /></a>
+      </div>
     </nav>
+    </>
   )
 }
 

@@ -4,8 +4,10 @@ import NavBar from './components/NavBar/NavBar';
 function App() {
   return (
     <>
-        <NavBar/>   
-        <ItemListContainer greeting="BIENVENIDOS!" />
+        <NavBar />  
+        <div className=" text-center">
+        <ItemListContainer greeting="Bienvenidos a FRANBI Indumentaria!!" />
+          </div> 
     </>
   );
 }
