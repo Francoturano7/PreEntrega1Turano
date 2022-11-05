@@ -8,16 +8,19 @@ function ItemListContainer(props) {
         <h2>Mis Productos..</h2>
         <Item 
         imgurl="/imgs/remera.jpeg"
-        title="Remera"
+        title="Remera Puma"
         price={100}
+        description="Remera 100% algodon, disponible del talle S al XXL"
         />
         <Item imgurl="/imgs/pantalon.jpeg"
-        title="Pantalon"
+        title="Pantalon TRNG"
         price={200}
+        description="Pantalon deportivo negro con cierre en los bolsillos, disponble del talle L al XL"
         />
         <Item imgurl="/imgs/zapatillas.jpeg"
-        title="Zapatilla"
+        title="Zapatilla Nike F22"
         price={400}
+        description="Zapatillas negras indoor, disponible del talle 37 al 43"
         />
 
     </div>

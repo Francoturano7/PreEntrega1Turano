@@ -10,9 +10,11 @@ function Item(props) {
       <div className="card-body text-center" >
         <div className="card-title"> <h3>{props.title}</h3></div>
         <div className="card-text">
-        <p>${props.price}</p>
+        <h3>${props.price}</h3>
         <MyButton text="ver mas" color="#04AA6D"/>
         </div>
+        <h5>DESCRIPCION:</h5>
+        <h6>{props.description}</h6>
       </div>
     </div>
     
