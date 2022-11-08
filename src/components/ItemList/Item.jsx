@@ -17,6 +17,8 @@ function Item(props) {
         </div>
         <h5 className='separar'>DESCRIPCION:</h5>
         <h6 className='separar'>{props.description}</h6>
+        <h7 className='separar' style={{color:"red"}} >Stock: {props.stock} unidades</h7>
+
       </div>
     </div>
     
