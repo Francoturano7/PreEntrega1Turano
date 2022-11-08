@@ -12,10 +12,10 @@ function NavBar() {
 
     <ul className='navbar-nav mx-auto ' >
   <li><a className='active ' href="#news">Productos</a></li>
-  <li><a href="#contact">Contacto</a></li>
-  <li><a href="#contact">Seguinos</a></li>
+  <li><a href="#">Contacto</a></li>
+  <li><a href="#">Seguinos</a></li>
 </ul>
-   <a  className='carro'  href="#about"><CartWidget  /></a>
+   <a  className='carro'  href="#"><CartWidget  /></a>
       </div>
     </nav>
     </>

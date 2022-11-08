@@ -1,6 +1,7 @@
 import React from 'react';
 import MyButton from '../MyButton';
 import "./Item.css";
+import ItemCount from './ItemCount';
 
 function Item(props) {
   return (
@@ -11,10 +12,11 @@ function Item(props) {
         <div className="card-title"> <h3>{props.title}</h3></div>
         <div className="card-text">
         <h3>${props.price}</h3>
-        <MyButton text="ver mas" color="#04AA6D"/>
+        <MyButton text="Comprar" color={props.color} colorLetra={props.colorLetra}/>
+        <ItemCount stock={props.stock} start={1} />
         </div>
-        <h5>DESCRIPCION:</h5>
-        <h6>{props.description}</h6>
+        <h5 className='separar'>DESCRIPCION:</h5>
+        <h6 className='separar'>{props.description}</h6>
       </div>
     </div>
     

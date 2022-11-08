@@ -1,7 +1,7 @@
 .btn {
     /* Color del texo */
     
-    color:darkred;
+    color:rgb(255, 255, 255);
     /* Eliminar color de fondo */
     
     background: transparent;
@@ -19,7 +19,7 @@
           text-align: center;
           display: inline-block;
           font-size: 16px;
-          margin: 4px 2px;
+          margin: 10px ;
           -webkit-transition-duration: 0.4s; /* Safari */
           transition-duration: 0.4s;
           cursor: pointer;
@@ -28,7 +28,7 @@
     }
     .btn1 {
           background-color: rgb(117, 111, 162); 
-          color: black; 
+          color: rgb(255, 255, 255); 
           border: 2px solid #000000;
     }
     /* Al poner el curso encima (hover) */
