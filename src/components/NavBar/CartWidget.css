@@ -1,0 +1,17 @@
+.carrito{
+    display: flex;
+    position: relative;
+}
+.carrito-num{
+    display: flex;
+    position: absolute;
+    width:20px ;
+    height: 20px;
+    top: 0;
+    right: 0;
+    border-radius: 20px;
+}
+.carrito-car{
+    display: flex;
+    position: relative;
+}
