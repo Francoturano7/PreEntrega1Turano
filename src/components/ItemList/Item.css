@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 .card-img{
     width: 280px;
     height: 300px;
@@ -44,5 +46,44 @@
     color: #21b276
   }
   .separar{
-    margin: 10px ;
+     margin: 10px ;
   }
+  .card-favicon.favorite{
+    display: block;
+    background-color: #21b276;
+    color: rgb(19, 17, 17);
+    border-radius:15px;
+    border-width: 1px;
+    border-color: black;
+  }
+  .card-favicon{
+    margin: 10px;
+    margin-top: 25px;
+    display: flex;
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    top: 0;
+    left: 0;
+    font-size: 20px;
+    background-color: rgb(246, 246, 246);
+    color: rgb(19, 17, 17);
+    border-radius:15px;
+    border-width: 1px;
+    border-color: rgb(255, 255, 255);
+  }
+  .contenedor-corazon{
+    display: flex;
+    position: relative;
+    top: 0;
+    right: 0;
+  }
+  .text-favorite{
+    padding:5px;
+    font-family: "Courier New", monospace;
+    color: #000000;;
+  }
+  .font-fam{
+    font-family: 'Bebas Neue', cursive;
+  }
+

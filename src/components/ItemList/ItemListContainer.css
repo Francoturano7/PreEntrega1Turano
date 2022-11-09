@@ -1,0 +1,27 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.img-fondo{
+  background-color:  #5f2ed1;
+  color: white;
+  }
+  .greeting{
+    background-color: rgb(19, 168, 61);
+    color: black;
+    padding: 10px 10px 10px 10px;
+    margin-left: 200px;
+    margin-right: 200px;
+    font-family: 'Bebas Neue', cursive;
+    border: 1px solid black;
+  }
+  .titulo-producto{
+    background-color: rgb(19, 168, 61);
+    color: black;
+    padding: 10px 10px 10px 10px;
+    margin-left: 400px;
+    margin-right: 400px;
+    font-family: 'Bebas Neue', cursive;
+    border: 1px solid black;
+
+
+  }
