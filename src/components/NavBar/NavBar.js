@@ -7,7 +7,7 @@ function NavBar() {
     <>
     <nav className='navbar navbar-dark navbar-expand-lg bg-dark' >
       <div className="container-fluid bg-dark">
-  <a className="navbar-brand logo" href="#home"><img src="./imgs/logoRopa.jpeg" alt="logoNavbar"/></a>
+  <a className="navbar-brand " href="#home"><img className=" logo"src="./imgs/logoR.jpeg" alt="logoNavbar"/></a>
   
 
     <ul className='navbar-nav mx-auto ' >

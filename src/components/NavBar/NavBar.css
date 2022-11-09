@@ -43,4 +43,11 @@ ul {
     height: 90px;
     width: 90px;
   }
+  .logo{
+    background-color: #333;
+    border-radius: 20px;
+    height: 60px;
+    width: 120px;
+
+  }
 
