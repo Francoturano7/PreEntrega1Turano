@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import MyButton from '../MyButton';
 import "./Item.css";
 import ItemCount from './ItemCount';
+import {Link} from "react-router-dom";
 
 function Item(props) {
   const[isFavorite,setIsFavorite]=useState(false);
@@ -12,8 +13,8 @@ const handleFavorite=()=>{
 let classNameFavBtn= isFavorite?"card-favicon favorite": "card-favicon";
 let textFavorite=isFavorite?"Agregado a favorito!": "Agregar a favorito";
 
+const urlDetail = `/item/${props.id}`;
   return (
-  
     <div className="card mx-auto d-block"  style={{ width: '18rem' }}>
   
       
@@ -32,8 +33,10 @@ let textFavorite=isFavorite?"Agregado a favorito!": "Agregar a favorito";
       <button onClick={handleFavorite} className={classNameFavBtn} >♡</button>
    </div>
         <h7 className='separar' style={{color:"red"}} >Stock: {props.stock} unidades</h7>
-        
       </div>
+      <Link to={urlDetail}>
+        <MyButton text="Ver mas" color={props.color} colorLetra={props.colorLetra}/>
+      </Link>
     </div>
     
   )

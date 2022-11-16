@@ -1,39 +1,42 @@
-import React from 'react'
-import Item from './Item'
+import { useState, useEffect } from 'react';
+import Item from './Item';
 import "./ItemListContainer.css";
+import getItems from '../../Services/mockService';  
+import {useParams} from "react-router-dom"; 
 
 function ItemListContainer(props) {
+  const [productos, setProductos]= useState([]);
+  const {idCategory}= useParams();
+  
+  useEffect( ()=>{
+      getItems(idCategory).then((respuestaDatos)=>{
+        setProductos(respuestaDatos);
+    });
+},[idCategory]);
   return (
     <div className=" img-fondo">
         <h1 className="greeting">{props.greeting}</h1>
         <h2 className='titulo-producto'>Mis Productos..</h2>
-        <Item 
-        imgurl="/imgs/remera.jpeg"
-        title="Remera Puma"
-        price={100}
-        description="Remera 100% algodon, disponible del talle S al XXL"
-        color="#5f2ed1"
-        colorLetra="white"
-        stock={6}
-        />
-        <Item imgurl="/imgs/pantalon.jpeg"
-        title="Pantalon TRNG"
-        price={200}
-        description="Pantalon deportivo negro con cierre en los bolsillos, disponble del talle L al XL"
-        color="#5f2ed1"
-        colorLetra="white"
-        stock={10}
-
-        />
-        <Item imgurl="/imgs/zapatillas.jpeg"
-        title="Zapatilla Nike F22"
-        price={400}
-        description="Zapatillas negras indoor, disponible del talle 37 al 43"
-        color="#5f2ed1"
-        colorLetra="white"
-        stock={8}
-
-        />
+        <div className=" item-list">
+       {
+         productos.map((producto)=>{
+           return(
+           <Item 
+           id={producto.id}
+           key={producto.id}
+           imgurl={producto.imgurl}        
+           title={producto.title}
+           price={producto.price}
+           description={producto.description}
+           color={producto.color}
+           colorLetra={producto.colorLetra}
+           stock={producto.stock}
+           categoria={producto.categoria}
+           />
+           );
+               })
+       }
+        </div>
 
     </div>
   )
