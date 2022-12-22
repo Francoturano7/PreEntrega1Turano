@@ -23,8 +23,7 @@ const urlDetail = `/item/${props.id}`;
       <img className="card-img top" src={props.imgurl} alt={props.title} />
         <div className="card-text">
         <h3>${props.price}</h3>
-        <MyButton text="Comprar" color={props.color} colorLetra={props.colorLetra}/>
-        <ItemCount stock={props.stock} start={1} />
+        <ItemCount colorLetra={props.colorLetra} color={props.color} stock={props.stock} start={1} />
         </div>
         <h5 className='separar'>DESCRIPCION:</h5>
         <h6 className='separar'>{props.description}</h6>
@@ -32,7 +31,7 @@ const urlDetail = `/item/${props.id}`;
     <small className='text-favorite'>{textFavorite}</small>
       <button onClick={handleFavorite} className={classNameFavBtn} >♡</button>
    </div>
-        <h7 className='separar' style={{color:"red"}} >Stock: {props.stock} unidades</h7>
+        <h6 className='separar' style={{color:"darkred"}} >Stock: {props.stock} unidades</h6>
       </div>
       <Link to={urlDetail}>
         <MyButton text="Ver mas" color={props.color} colorLetra={props.colorLetra}/>

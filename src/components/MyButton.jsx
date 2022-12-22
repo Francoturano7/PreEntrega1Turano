@@ -6,16 +6,17 @@ function MyButton(props){
   let[colorLetra,setColorLetra]=useState(props.colorLetra);
   
   function handleClick(){
-    setColorBtn("rgb(36 255 33)");
-    setColorLetra("black");
+    setColorBtn("grey");
+    setColorLetra("white"); 
+    props.onClick && props.onClick();
   }
   
+  
   return (
-  <button 
+  <button
   onClick={handleClick}
   style={{backgroundColor:colorBtn, color:colorLetra, border:"1px solid black"}}
-  className="btn btn1">{props.text}</button>
+  className=" btn btn1 ">{props.text}</button>
   )
-  
 }
 export default MyButton;

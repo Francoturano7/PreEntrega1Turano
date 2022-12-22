@@ -1,10 +1,14 @@
 import React from 'react';
 import "./CartWidget.css";
+import { useContext } from "react";
+import { cartContext } from '../../context/cartContext';
 function CartWidget() {
+  const miContext= useContext(cartContext)
   return (
     <div className='carrito'>
       <img className='carrito-car' src="../imgs/carrito1.jpeg" alt="logoCarrito"/> 
-      <img className='carrito-num' src="../imgs/numero.webp" alt="numeroCarrito"/>
+     
+      <span className='carrito-num'>{miContext.itemsInCart()}</span>
     </div>
   )
 }

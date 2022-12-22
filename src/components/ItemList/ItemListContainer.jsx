@@ -11,6 +11,7 @@ function ItemListContainer(props) {
   useEffect( ()=>{
       getItems(idCategory).then((respuestaDatos)=>{
         setProductos(respuestaDatos);
+        
     });
 },[idCategory]);
   return (

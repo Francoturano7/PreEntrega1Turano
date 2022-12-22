@@ -108,6 +108,28 @@ const productos=[
     colorLetra:"white",
     stock:8,
     categoria:"calzado"
-    }
+    },
+    {
+        id:11,
+        imgurl:"/imgs/gorra3.webp",
+        title:"Gorra New York",
+        price:2600,
+        description:"Gorra negra clasica calidad premium x",
+        color:"#5f2ed1",
+        colorLetra:"white",
+        stock:5,
+        categoria:"gorras"
+        },
+        {
+            id:12,
+            imgurl:"/imgs/pantalon3.jpeg",
+            title:"Pantalon Real Madrid",
+            price:4800,
+            description:"Pantalon Azul Real Madrid, disponible del talle L al XL",
+            color:"#5f2ed1",
+            colorLetra:"white",
+            stock:8,
+            categoria:"pantalones"
+            }
 ]
 export default productos
