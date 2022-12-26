@@ -1,0 +1,25 @@
+.head-tabla {
+   background-color: black;
+    color: white;
+    font-size: 20px;
+
+}
+.body-tabla {
+   text-transform: uppercase;
+    color: black;
+    font-size: 20px;
+
+}
+.marginar{
+    margin-top: 200px;
+}
+.total{
+    font-size: 30px;
+    text-transform: uppercase;
+    color: white;
+    background-color:rgb(96, 8, 143);
+    border: 1px solid black;
+    text-align:center;
+    padding: 20px;
+    margin: 0px 470px 0px 470px;
+}

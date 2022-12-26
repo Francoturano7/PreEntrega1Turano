@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import MyButton from '../MyButton';
 import "./Item.css";
-import ItemCount from './ItemCount';
 import {Link} from "react-router-dom";
 
 function Item(props) {
@@ -10,7 +9,7 @@ function Item(props) {
 const handleFavorite=()=>{
   setIsFavorite(!isFavorite)
 };
-let classNameFavBtn= isFavorite?"card-favicon favorite": "card-favicon";
+let classNameFavBtn= isFavorite?"card-favicon favorite  ": "card-favicon";
 let textFavorite=isFavorite?"Agregado a favorito!": "Agregar a favorito";
 
 const urlDetail = `/item/${props.id}`;
@@ -19,23 +18,25 @@ const urlDetail = `/item/${props.id}`;
   
       
       <div className="card-body text-center font-fam" >
+        <div className='contenedor-corazon '>
+    <small className='text-favorite '>{textFavorite}</small>
+      <button onClick={handleFavorite} className={classNameFavBtn} >♡</button>
+   </div>
         <div className="card-title"> <h3>{props.title}</h3></div>
       <img className="card-img top" src={props.imgurl} alt={props.title} />
         <div className="card-text">
         <h3>${props.price}</h3>
-        <ItemCount colorLetra={props.colorLetra} color={props.color} stock={props.stock} start={1} />
         </div>
-        <h5 className='separar'>DESCRIPCION:</h5>
-        <h6 className='separar'>{props.description}</h6>
-        <div className='contenedor-corazon'>
-    <small className='text-favorite'>{textFavorite}</small>
-      <button onClick={handleFavorite} className={classNameFavBtn} >♡</button>
-   </div>
+       
         <h6 className='separar' style={{color:"darkred"}} >Stock: {props.stock} unidades</h6>
       </div>
       <Link to={urlDetail}>
         <MyButton text="Ver mas" color={props.color} colorLetra={props.colorLetra}/>
       </Link>
+      <div>
+      {props.discount && <small className='verde font-fam'>{props.discount} off</small>}
+       {props.envio && <small className='verde font-fam'>ENVIO {props.envio} </small>}
+      </div>
     </div>
     
   )

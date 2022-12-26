@@ -51,8 +51,8 @@
   }
   .card-favicon.favorite{
     display: block;
-    background-color: #21b276;
-    color: rgb(19, 17, 17);
+    background-color: rgb(213, 8, 8);
+    color: white;
     border-radius:15px;
     border-width: 1px;
     border-color: black;
@@ -68,7 +68,7 @@
     left: 0;
     font-size: 20px;
     background-color: rgb(246, 246, 246);
-    color: rgb(19, 17, 17);
+    color: rgb(213, 8, 8);
     border-radius:15px;
     border-width: 1px;
     border-color: rgb(255, 255, 255);
@@ -89,3 +89,10 @@
     font-family: 'Bebas Neue', cursive;
   }
 
+.verde{
+  font-size: 20px;
+  color: white;
+  background-color: #21b276;
+  border-radius: 20%;
+  padding: 5px;
+}

@@ -1,46 +1,29 @@
 import { useState, useEffect } from 'react';
-import Item from './Item';
 import "./ItemListContainer.css";
 import getItems from '../../Services/mockService';  
 import {useParams} from "react-router-dom"; 
+import ItemList from './itemList';
+import Loader from '../Loaders/Loader';
 
-function ItemListContainer(props) {
-  const [productos, setProductos]= useState([]);
+function ItemListContainer() {
+  const [products, setProducts]= useState(null);
   const {idCategory}= useParams();
+
+
+
+  async function getItemsAsync(){
+    let respuesta = await getItems(idCategory);
+    setProducts(respuesta);
+  }
   
   useEffect( ()=>{
-      getItems(idCategory).then((respuestaDatos)=>{
-        setProductos(respuestaDatos);
-        
-    });
-},[idCategory]);
-  return (
-    <div className=" img-fondo">
-        <h1 className="greeting">{props.greeting}</h1>
-        <h2 className='titulo-producto'>Mis Productos..</h2>
-        <div className=" item-list">
-       {
-         productos.map((producto)=>{
-           return(
-           <Item 
-           id={producto.id}
-           key={producto.id}
-           imgurl={producto.imgurl}        
-           title={producto.title}
-           price={producto.price}
-           description={producto.description}
-           color={producto.color}
-           colorLetra={producto.colorLetra}
-           stock={producto.stock}
-           categoria={producto.categoria}
-           />
-           );
-               })
-       }
-        </div>
+      getItemsAsync();
+      return () => {
+        console.log("componente desmontado");
+      };     
+    }, [idCategory]);
+return <div > {products ? <ItemList  products={products} /> : <Loader/>} </div>;
 
-    </div>
-  )
 }
 
-export default ItemListContainer
+export default ItemListContainer;

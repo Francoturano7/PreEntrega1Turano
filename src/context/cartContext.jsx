@@ -26,9 +26,23 @@ export function CartContextProvider({children}){
         cart.forEach((itemInCart)=>(total= total + itemInCart.count));
         return total;
     }
+    function clear(id){
+        console.log("Eliminando el item",id)
+    }
+    function removeItem(idRemove){
+        console.log("Eliminando el item",idRemove)
+    }
+    function priceInCart(){
+        let total=0;
+        cart.forEach((itemInCart)=>(total= total + itemInCart.count));
+        return total;
+    }
+    function alreadyInCart(){
+
+    }
     
     return(
-        <cartContext.Provider value={{cart, saludoContext,itemsInCart,addToCart}}>
+        <cartContext.Provider value={{cart, saludoContext,itemsInCart,addToCart,removeItem, clear,priceInCart,alreadyInCart}}>
          {children}
         </cartContext.Provider>
     )

@@ -34,3 +34,12 @@ body{
 
 
   }
+
+  .item-list2{
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 300px 50px 0px 50px;
+  }
+
