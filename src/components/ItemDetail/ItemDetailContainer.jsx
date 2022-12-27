@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import {getSingleItem} from '../../Services/mockService';   
+import {getSingleItem} from '../../Services/firestore';   
 import ItemDetail from './ItemDetail';
 import "./ItemDc.css";
 import {useParams} from "react-router-dom";

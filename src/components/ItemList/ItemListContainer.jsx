@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import "./ItemListContainer.css";
-import getItems from '../../Services/mockService';  
+import getItems, { getItemsByCategory } from '../../Services/firestore';  
 import {useParams} from "react-router-dom"; 
 import ItemList from './itemList';
 import Loader from '../Loaders/Loader';
@@ -12,8 +12,15 @@ function ItemListContainer() {
 
 
   async function getItemsAsync(){
-    let respuesta = await getItems(idCategory);
-    setProducts(respuesta);
+    if(!idCategory){
+      let respuesta = await getItems();
+      setProducts(respuesta);
+
+    }
+    else{
+      let respuesta = await getItemsByCategory(idCategory)
+      setProducts(respuesta);
+    }
   }
   
   useEffect( ()=>{

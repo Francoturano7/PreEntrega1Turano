@@ -24,7 +24,7 @@ function CartView() {
            <tbody>
 
        {cart.map((item)=>(
-           <tr className='body-tabla bg-success'>
+           <tr key={item.id} className='body-tabla bg-success'>
                <td >{item.title}</td>
                <td>${item.price}</td>
                <td >{item.count} </td>
