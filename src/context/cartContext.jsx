@@ -28,11 +28,11 @@ export function CartContextProvider({children}){
     }
     function priceInCart(){
         let totalPrice=0;
-        cart.forEach((producto)=>(totalPrice= totalPrice + (producto.price*producto.cantidad)));
+        cart.forEach((producto)=>(totalPrice= totalPrice + (producto.price*producto.count)));
         return totalPrice;
     }
-    function clear(id){
-        console.log("Eliminando el item",id)
+    function clear(){
+        setCart([]);
     }
     function removeItem(idRemove){
         console.log("Eliminando el item",idRemove);

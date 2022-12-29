@@ -4,6 +4,7 @@ import MyButton from '../MyButton';
 import "../CartView/CartView.css" ;
 import { createOrder } from '../../Services/firestore';
 import {useNavigate} from "react-router-dom";
+import CartForm from './CartForm';
 
 function CartView() {
     const {cart, removeItem, clear, priceInCart} = useContext(cartContext);
@@ -17,13 +18,9 @@ function CartView() {
     </div>
     ) ;
 
-async function handleCheckout(evt){
+async function handleCheckout(evt,data){
     const order={
-        buyer:{
-            name:"Franco",
-            email:"francoturano@gmail.com",
-            phone:"11223344"
-        },
+        buyer:data,
         items:cart,
         total:0,
         date: new Date(),
@@ -34,7 +31,9 @@ async function handleCheckout(evt){
 
   return (
       
-   <div>
+   <div >
+       <div className='cdp'>
+
        <h1 className='greeting'>Carrito de compras</h1>
        <table className='table table-bordered table-hover'>
            <thead>
@@ -60,12 +59,16 @@ async function handleCheckout(evt){
            </tbody>
        </table>
        <div>
-      <h3 className='total'>Total de todos los productos: $ {priceInCart}</h3>
-      <MyButton onClick={handleCheckout} text="Finalizar Compra" color="darkgreen" colorLetra="white"></MyButton>
+      <h3 className='total'>Total de todos los productos: $ {priceInCart()}</h3>
        <MyButton onClick={()=>clear()} text="Vaciar carrito" color="darkblue" colorLetra="white"></MyButton>
+       </div>
+       </div>
+       <h3 className='greeting'>Formulario</h3>
+      <CartForm onSubmit={handleCheckout}/>
+      
        
        </div>
-   </div>
+   
   );
 }
 

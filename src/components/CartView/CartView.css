@@ -31,3 +31,24 @@
 .marginar-{
     margin-top: 50px;
 }
+
+.formulario{
+    text-align: center;
+    align-items: center;
+}
+.total2{
+    font-size: 20px;
+    overflow:hidden;
+    text-transform: uppercase;
+    color: white;
+    background-color:rgb(96, 8, 143);
+    border: 1px solid black;
+    text-align:center;
+    padding: 20px;
+    margin: 0px 270px 0px 270px;
+}
+
+.cdp{
+    border: 1px solid white;
+    margin: 10px;
+}
