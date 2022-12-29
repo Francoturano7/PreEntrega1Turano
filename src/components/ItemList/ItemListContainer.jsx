@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import "./ItemListContainer.css";
-import getItems, { getItemsByCategory } from '../../Services/firestore';  
+import  { getItemsByCategory,getItemsOrdered } from '../../Services/firestore';  
 import {useParams} from "react-router-dom"; 
 import ItemList from './itemList';
 import Loader from '../Loaders/Loader';
@@ -13,7 +13,7 @@ function ItemListContainer() {
 
   async function getItemsAsync(){
     if(!idCategory){
-      let respuesta = await getItems();
+      let respuesta = await getItemsOrdered();
       setProducts(respuesta);
 
     }

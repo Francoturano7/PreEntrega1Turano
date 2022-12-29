@@ -15,11 +15,19 @@
 }
 .total{
     font-size: 30px;
+    overflow:hidden;
     text-transform: uppercase;
     color: white;
     background-color:rgb(96, 8, 143);
     border: 1px solid black;
     text-align:center;
     padding: 20px;
-    margin: 0px 470px 0px 470px;
+    margin: 0px 270px 0px 270px;
+}
+.marginar-menos{
+    margin-top: 100px;
+}
+
+.marginar-{
+    margin-top: 50px;
 }

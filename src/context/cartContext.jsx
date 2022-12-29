@@ -26,16 +26,19 @@ export function CartContextProvider({children}){
         cart.forEach((itemInCart)=>(total= total + itemInCart.count));
         return total;
     }
+    function priceInCart(){
+        let totalPrice=0;
+        cart.forEach((producto)=>(totalPrice= totalPrice + (producto.price*producto.cantidad)));
+        return totalPrice;
+    }
     function clear(id){
         console.log("Eliminando el item",id)
     }
     function removeItem(idRemove){
-        console.log("Eliminando el item",idRemove)
-    }
-    function priceInCart(){
-        let total=0;
-        cart.forEach((itemInCart)=>(total= total + itemInCart.count));
-        return total;
+        console.log("Eliminando el item",idRemove);
+        const newCart=[...cart];
+        newCart.pop();
+        setCart(newCart);
     }
     function alreadyInCart(){
 

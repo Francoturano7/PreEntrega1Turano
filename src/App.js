@@ -5,6 +5,7 @@ import NavBar from './components/NavBar/NavBar';
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import { CartContextProvider } from "./context/cartContext";
 import CartView from "./components/CartView/CartView";
+import ThankYou from "./components/ThankYou/ThankYou";
 function App() {
   return (
     <CartContextProvider>
@@ -19,6 +20,7 @@ function App() {
 
       <Route path="/item/:id" element={<ItemDetailContainer/>}/>
       <Route path="/cart" element={<CartView/>}/>
+      <Route path="/thankyou/:idOrder" element={<ThankYou/>}/>
 
       <Route path="*" element={<h1>Error 404: Esta pagina no existe</h1>}/>
 
